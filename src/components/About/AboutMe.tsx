@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./AboutMe.css";
 
-const profilePic = "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2pvYjEwMzQtZWxlbWVudC0wNi0zOTcucG5n.png";
+const profilePic: string = "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2pvYjEwMzQtZWxlbWVudC0wNi0zOTcucG5n.png";
 
-const AboutMe = () => {
+const techStack: string[] = ["React.js", "Node.js", "MongoDB", "Express", "JavaScript", "TypeScript"];
+
+const AboutMe: React.FC = () => {
   return (
     <motion.div 
       className="about-section-container"
@@ -47,7 +49,7 @@ const AboutMe = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          {["React.js", "Node.js", "MongoDB", "Express", "JavaScript", "TypeScript"].map((tech, index) => (
+          {techStack.map((tech, index) => (
             <motion.span 
               key={index}
               whileHover={{ scale: 1.2, rotate: 5 }}
