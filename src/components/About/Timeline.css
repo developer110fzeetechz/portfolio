@@ -1,0 +1,117 @@
+/* General Styling */
+.timeline-container {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px 0;
+    background: #000; /* Black Background */
+    color: #fff; /* White Text */
+
+  }
+  
+  /* Glowing Timeline Line */
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #ff0088; /* Neon Pink */
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px #ff0088;
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(229, 209, 220, 0.3); /* Black background with opacity */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 136, 0.3); /* Subtle Neon Glow */
+    width: 45%;
+ 
+  }
+  
+  .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+    margin-left: auto;
+  }
+  
+  /* Glowing Timeline Dots */
+  .timeline-dot {
+    position: absolute;
+    top: 50%;
+   
+    width: 16px;
+    height: 16px;
+    background: #ff0088; /* Neon Pink */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px #ff0088;
+  
+  }
+  
+  /* Content Styling */
+  .timeline-content {
+    /* padding: 10px 20px; */
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+  }
+  
+  .year {
+    font-weight: bold;
+    color: #ff0088; /* Neon Pink */
+    font-size: 14px;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #ff0088; /* Pink Header */
+  }
+  
+  .location {
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 500;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #ddd;
+  }
+  .company {
+    font-size: 16px;
+    color: #ff0088; /* Pink Color */
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-line {
+      left: 20px;
+    }
+  
+    .timeline-item {
+      width: 85%;
+      flex-direction: row !important;
+      text-align: left !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  
+    .timeline-dot {
+      left: 20px;
+      top: 50%;
+      left: 0% !important;
+      /* transform: translate(-50%, -50%) !important; */
+    }
+  }
+  
